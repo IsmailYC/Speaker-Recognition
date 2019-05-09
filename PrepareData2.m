@@ -32,7 +32,7 @@ for i=1:mPersons
     mfccData{1,i}= mfcc;
     lpcData{1,i}= lpc;
     class= zeros(mPersons,1);
-    class(persons(1,i),1)=1;
+    class(i,1)=1;
     target{1,i}= repmat(class,1 , n);
 end;
 mfccData= cell2mat(mfccData);
